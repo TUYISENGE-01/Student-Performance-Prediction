@@ -59,6 +59,4 @@ if st.button("Predict Result"):
 
     st.subheader("Prediction Result:")
     st.success(f"The student will get: {result}")
-    st.write("---")
-    st.write("### Input Summary")
-    st.dataframe(encode_input)
+
