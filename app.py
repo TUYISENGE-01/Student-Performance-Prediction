@@ -28,9 +28,9 @@ parent_edu = st.selectbox("Parental Level of Education", [
 lunch = st.selectbox("Lunch Type", ["Standard", "Free/Reduced"])
 test_prep = st.selectbox("Test Preparation Course", ["None", "Completed"])
 
-math_score = st.slider("Math Score", 0, 100, 50)
-reading_score = st.slider("Reading Score", 0, 100, 50)
-writing_score = st.slider("Writing Score", 0, 100, 50)
+math_score = st.number_input("Math Score", min_value=0, max_value=100, value=50)
+reading_score = st.number_input("Reading Score", min_value=0, max_value=100, value=50)
+writing_score = st.number_input("Writing Score", min_value=0, max_value=100, value=50)
 
 # Convert categorical values to numeric (based on label encoding used in training)
 def encode_input(gender, race, parent_edu, lunch, test_prep):
@@ -59,4 +59,5 @@ if st.button("Predict Result"):
 
     st.subheader("Prediction Result:")
     st.success(f"The student will get: {result}")
+
 
